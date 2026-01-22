@@ -1,0 +1,41 @@
+# Test your FastAPI endpoints
+
+# 1️⃣ Root endpoint
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+# 2️⃣ Hello endpoint with path parameter
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+# 3️⃣ Task API - Get all tasks
+GET http://127.0.0.1:8000/tasks
+Accept: application/json
+
+###
+
+# 4️⃣ Task API - Create a new task
+POST http://127.0.0.1:8000/tasks
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Finish FastAPI tutorial",
+  "done": false
+}
+
+###
+
+# 5️⃣ Task API - Update a task's done status
+PUT http://127.0.0.1:8000/tasks/1?done=true
+Accept: application/json
+
+###
+
+# 6️⃣ Task API - Delete a task
+DELETE http://127.0.0.1:8000/tasks/1
+Accept: application/json
